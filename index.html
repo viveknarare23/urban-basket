@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Basket | Everyday Essentials</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#home" class="brand nav-link" data-page="home">
+            <span class="brand-icon">u.</span>
+            <span>urban basket<small>EVERYDAY FINDS, MADE SIMPLE</small></span>
+        </a>
+
+        <nav class="navigation">
+            <a href="#home" class="nav-link" data-page="home">Home</a>
+            <a href="#shop" class="nav-link" data-page="shop">Shop</a>
+            <a href="#about" class="nav-link" data-page="about">About</a>
+            <a href="#cart" class="nav-link cart-link" data-page="cart">
+                My Cart <span id="count">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <div class="hero">
+                <div class="hero-content">
+                    <span class="eyebrow">A LITTLE SOMETHING FOR EVERY DAY</span>
+                    <h1>Good things.<br>Everyday living.</h1>
+                    <p>
+                        Discover useful, thoughtfully picked products
+                        that make your everyday life a little better.
+                    </p>
+                    <a href="#shop" class="button nav-link" data-page="shop">
+                        Explore the collection <span>↗</span>
+                    </a>
+                    <div class="hero-note">
+                        <span class="note-dot"></span>
+                        Simple shopping, thoughtful choices.
+                    </div>
+                </div>
+
+                <div class="hero-art">
+                    <div class="art-circle"></div>
+                    <div class="art-label">THE EVERYDAY EDIT <span>01 / 06</span></div>
+                    <div class="art-caption">
+                        <span>Find your new favourite.</span>
+                        <span>Small things, big difference.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="benefits">
+                <div>
+                    <span class="benefit-icon">✳</span>
+                    <div>
+                        <strong>Everyday essentials</strong>
+                        <p>Useful finds for daily life</p>
+                    </div>
+                </div>
+                <div>
+                    <span class="benefit-icon">◇</span>
+                    <div>
+                        <strong>Easy to explore</strong>
+                        <p>Find what you need quickly</p>
+                    </div>
+                </div>
+                <div>
+                    <span class="benefit-icon">♡</span>
+                    <div>
+                        <strong>Made for everyone</strong>
+                        <p>A little something for all</p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="content-section">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">PICKED FOR YOU</span>
+                        <h2>Meet your next favourite.</h2>
+                        <p>Everyday products worth taking a look at.</p>
+                    </div>
+                    <a href="#shop" class="text-link nav-link" data-page="shop">
+                        View all products ↗
+                    </a>
+                </div>
+
+                <div id="products" class="products">
+                    <p class="loading-text">Finding good things for you...</p>
+                </div>
+            </section>
+
+            <section class="small-banner">
+                <div>
+                    <span class="eyebrow">THE URBAN BASKET WAY</span>
+                    <h2>Less fuss. More good finds.</h2>
+                    <p>A simple place to discover the things you need.</p>
+                </div>
+                <a href="#shop" class="button button-light nav-link" data-page="shop">
+                    Start exploring ↗
+                </a>
+            </section>
+        </section>
+
+        <!-- Shop Page -->
+        <section id="shop" class="page">
+            <div class="page-intro">
+                <span class="eyebrow">OUR COLLECTION</span>
+                <h1>Find your kind of thing.</h1>
+                <p>Browse our collection and find something you love.</p>
+            </div>
+
+            <div class="shop-toolbar">
+                <div class="search-box">
+                    <span>⌕</span>
+                    <input
+                        type="text"
+                        id="search"
+                        placeholder="Search for products..."
+                        aria-label="Search products"
+                    >
+                </div>
+
+                <select id="category" aria-label="Filter by category">
+                    <option value="all">All categories</option>
+                </select>
+            </div>
+
+            <div class="shop-caption">
+                <span>THE EVERYDAY COLLECTION</span>
+                <span>Thoughtful finds, all in one place.</span>
+            </div>
+
+            <div id="shopProducts" class="products">
+                <!-- Products can also be displayed in this area by your existing JavaScript. -->
+            </div>
+        </section>
+
+        <!-- Cart Page -->
+        <section id="cart" class="page">
+            <div class="page-intro">
+                <span class="eyebrow">YOUR SELECTION</span>
+                <h1>Your shopping basket.</h1>
+                <p>Take a look at what you've picked out.</p>
+            </div>
+
+            <div class="cart-layout">
+                <div class="cart-panel">
+                    <div class="panel-heading">
+                        <h2>Items in your basket</h2>
+                        <span>YOUR PICKS</span>
+                    </div>
+                    <div id="cartItems">
+                        <p class="empty-message">Your basket is waiting for something good.</p>
+                    </div>
+                    <a href="#shop" class="text-link nav-link" data-page="shop">
+                        ← Continue shopping
+                    </a>
+                </div>
+
+                <aside class="summary-panel">
+                    <span class="eyebrow">ORDER SUMMARY</span>
+                    <h2>A quick total.</h2>
+                    <div class="summary-line">
+                        <span>Subtotal</span>
+                        <strong id="total">₹0</strong>
+                    </div>
+                    <div class="summary-line">
+                        <span>Delivery</span>
+                        <span class="muted">Calculated at checkout</span>
+                    </div>
+                    <div class="summary-note">
+                        Your selected products will appear here.
+                    </div>
+                    <a href="#checkout" class="button full-button nav-link" data-page="checkout">
+                        Continue to checkout →
+                    </a>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Checkout Page -->
+        <section id="checkout" class="page">
+            <div class="page-intro">
+                <span class="eyebrow">ALMOST THERE</span>
+                <h1>Let's wrap this up.</h1>
+                <p>Enter your details to continue with your order.</p>
+            </div>
+
+            <div class="checkout-layout">
+                <div class="checkout-panel">
+                    <h2>Delivery details</h2>
+                    <p class="muted">Please fill in your information below.</p>
+
+                    <form id="checkoutForm">
+                        <label for="customerName">Full name</label>
+                        <input
+                            type="text"
+                            id="customerName"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                        <label for="customerEmail">Email address</label>
+                        <input
+                            type="email"
+                            id="customerEmail"
+                            name="email"
+                            placeholder="you@example.com"
+                            required
+                        >
+
+                        <label for="customerAddress">Delivery address</label>
+                        <textarea
+                            id="customerAddress"
+                            name="address"
+                            rows="3"
+                            placeholder="House number, street, city"
+                            required
+                        ></textarea>
+
+                        <label for="customerPhone">Phone number</label>
+                        <input
+                            type="tel"
+                            id="customerPhone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            required
+                        >
+
+                        <button type="submit" class="button full-button">
+                            Place my order →
+                        </button>
+                    </form>
+
+                    <p id="message" class="form-message" aria-live="polite"></p>
+                </div>
+
+                <aside class="summary-panel checkout-summary">
+                    <span class="eyebrow">A LITTLE RECAP</span>
+                    <h2>Your order</h2>
+                    <div id="checkoutItems">
+                        <p class="muted">Your selected items will be shown here.</p>
+                    </div>
+                    <div class="summary-line">
+                        <span>Total</span>
+                        <strong id="checkoutTotal">₹0</strong>
+                    </div>
+                    <p class="muted small-text">
+                        This is a student shopping project. Orders are for demonstration purposes.
+                    </p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- About Page -->
+        <section id="about" class="page">
+            <div class="about-hero">
+                <span class="eyebrow">A NOTE ABOUT US</span>
+                <h1>Shopping should feel simple.</h1>
+                <p>
+                    Urban Basket is a shopping website concept built around
+                    finding useful products without making the experience complicated.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <article class="about-card">
+                    <span class="about-number">01</span>
+                    <h2>Browse with ease</h2>
+                    <p>Explore products, search by name and filter by category.</p>
+                </article>
+
+                <article class="about-card">
+                    <span class="about-number">02</span>
+                    <h2>Keep your picks</h2>
+                    <p>Add items to your basket and manage quantities as you shop.</p>
+                </article>
+
+                <article class="about-card">
+                    <span class="about-number">03</span>
+                    <h2>Simple checkout</h2>
+                    <p>Enter your details through a straightforward checkout form.</p>
+                </article>
+            </div>
+
+            <div class="project-note">
+                <span class="eyebrow">COLLEGE PROJECT</span>
+                <h2>Built to learn how the web works.</h2>
+                <p>
+                    This project brings together HTML, CSS, JavaScript,
+                    JSON data, browser storage and asynchronous data loading
+                    in one shopping experience.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="#home" class="brand footer-brand nav-link" data-page="home">
+            <span class="brand-icon">u.</span>
+            <span>urban basket<small>EVERYDAY FINDS, MADE SIMPLE</small></span>
+        </a>
+        <p>Good things for everyday living.</p>
+        <span class="copyright">© 2026 Urban Basket · Student Project</span>
+    </footer>
+
+    <div id="toast" class="toast" hidden></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
